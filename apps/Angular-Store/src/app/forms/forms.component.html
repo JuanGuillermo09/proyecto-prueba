@@ -1,0 +1,43 @@
+<header class="bg-[#c9cfdb] p-4 shadow-md fixed top-0 left-0 w-full z-10">
+  <div class="container mx-auto flex justify-between items-center">
+    <span class="text-black text-xl font-semibold">Nueva nota</span>
+    <button routerLink="" mat-raised-button
+      class="ml-auto !bg-[#566069] !text-white rounded-lg px-4 py-2 !hover:bg-[#4a5256] transition duration-300 ease-in-out">
+      Volver
+    </button>
+  </div>
+</header>
+
+
+<div class="flex items-center justify-center h-screen">
+  <div class="w-full max-w-2xl p-10">
+    <form #miFormulario="ngForm" (ngSubmit)="EnviarDatos(miFormulario)" novalidate>
+      <mat-form-field appearance="fill" class="w-full mb-6">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Escribe tu Nombre" class="text-lg" [(ngModel)]="formulario.Nombre"
+          [ngModelOptions]="{standalone: true}" #nombre="ngModel" minlength="3"  maxlength="100"required (ngModelChange)="Validity()">
+        <mat-error *ngIf="nombre.invalid && nombre.touched">
+          <span *ngIf="nombre.errors?.['required']">El Nombre es obligatorio.</span>
+          <span *ngIf="nombre.errors?.['minlength']">Debe tener al menos 3 caracteres.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-full mb-6">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput placeholder="Escribe algo" class="!resize-none !text-lg !w-full !h-40 p-3"
+          [(ngModel)]="formulario.Descripcion" [ngModelOptions]="{standalone: true}" #descripcion="ngModel"
+          minlength="4" maxlength="400" required (ngModelChange)="Validity()"></textarea>
+        <mat-error *ngIf="descripcion.invalid && descripcion.touched">
+          <mat-error *ngIf="descripcion?.errors?.['required']">
+            La descripción es obligatoria.
+          </mat-error>
+          <mat-error *ngIf="descripcion?.errors?.['minlength']">
+            Debe tener al menos 4 caracteres.
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="w-full py-3 text-lg" [disabled]="!formularioValido">
+        Guardar
+      </button>
+    </form>
+  </div>
+</div>
