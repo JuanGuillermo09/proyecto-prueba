@@ -1,20 +1,22 @@
 # AngularMonorepo
 Este proyecto es un Monorepo de Angular que centraliza el desarrollo de dos aplicaciones: Angular-Store y Inventory 
 
-#Angular-Store: 
+# Angular-Store: 
 
 Está diseñada para mostrar guardar y eliminar notas  
 
-#Inventory: 
+# Inventory: 
 
 Está diseñada para mostrar notas que se guardan en Angular-Store 
 
- 
+# Como instalar el proyecto   
 
+```sh
+npm install --force
 
-## Run tasks
+```
 
-To run the dev server for your app, use:
+# Para ejecutar el servidor de desarrollo de Angular-Store, use:
 
 ```sh
 npx nx serve Angular-Store
