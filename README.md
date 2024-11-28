@@ -1,5 +1,15 @@
 # AngularMonorepo
+Este proyecto es un Monorepo de Angular que centraliza el desarrollo de dos aplicaciones: Angular-Store y Inventory 
 
+#Angular-Store: 
+
+Está diseñada para mostrar guardar y eliminar notas  
+
+#Inventory: 
+
+Está diseñada para mostrar notas que se guardan en Angular-Store 
+
+ 
 
 
 ## Run tasks
