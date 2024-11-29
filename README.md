@@ -19,7 +19,7 @@ npm install --force
 # Para ejecutar el servidor de desarrollo de Angular-Store, use:
 
 ```sh
-npx nx serve Angular-Store:serve 
+npx nx run Angular-Store:serve 
 ```
 
 # Para ejecutar el servidor de desarrollo de Inventory, use:
